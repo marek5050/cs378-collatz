@@ -4,7 +4,7 @@
  */
 
 
-/*! \mainpage CS371P Collatz
+/*! \mainpage CS378 Collatz
  *
  * \section intro_sec Introduction
  *
@@ -298,8 +298,10 @@ std::map <pair<int,int>,int> mini_cache2;
 // ------------
 
 int collatz_eval (int i, int j) {
+	assert(i > 0)
+	assert(j > 0)
 
-    int cur,steps,_min, _max_val, _max, second_val;
+	int cur,steps,_min, _max_val, _max, second_val;
 
     std::map<std::pair<int,int>,int>::iterator iter1 = mini_cache1.begin();
     std::map<std::pair<int,int>,int>::iterator iter2 = mini_cache2.begin();
@@ -312,9 +314,6 @@ int collatz_eval (int i, int j) {
 
     /* One of the most common tests, we'll just return 525 the expected value */
     if(_min == 1 && _max_val == 999999) return 525;
-
-
-
 
     for(;i<=_max_val;i++, cur=i, steps= 1 ){
         
@@ -354,7 +353,7 @@ int collatz_eval (int i, int j) {
                 i+=99;    
 
             if(_max < second_val){ 
-                //Asign new value
+                //Assign new value
                 _max = second_val;
             }
             continue;

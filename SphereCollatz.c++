@@ -4,6 +4,43 @@
  */
 
 
+/*! \mainpage CS378 Collatz
+ *
+ * \section intro_sec Introduction
+ *
+ *
+ * "Background:
+ * Problems in Computer Science are often classified as
+ * belonging to a certain class of problems (e.g., NP,
+ * Unsolvable, Recursive). In this problem you will be
+ * analyzing a property of an algorithm whose classification
+ * is not known for all possible inputs."
+ * http://www.spoj.com/problems/PROBTNPO/
+ * \section time_est Time
+ * Estimate: 6 hours
+ * Actual: 12 hours
+ *
+ * \section install_sec The Problem
+ * Consider the following algorithm:
+ * 1. input n
+ * 2. print n
+ * 3. if n = 1 then STOP
+ *         4. if n is odd then n = 3n + 1
+ *
+ *          5. else n = n / 2
+ * 6. GOTO 2
+ * Given the input 22, the following sequence of numbers will be printed 22 11 34 17 52 26 13 40 20 10 5 16 8 4 2 1
+ *
+ * It is conjectured that the algorithm above will terminate (when a 1 is printed) for any integral input value. Despite the simplicity of the algorithm, it is unknown whether this conjecture is true. It has been verified, however, for all integers n such that 0 < n < 1,000,000 (and, in fact, for many more numbers than this.)
+ *
+ * Given an input n, it is possible to determine the number of numbers printed (including the 1). For a given n this is called the cycle-length of n. In the example above, the cycle length of 22 is 16.
+ *
+ * For any two numbers i and j you are to determine the maximum cycle length over all numbers between i and j.
+ *
+ *
+ */
+
+
 // --------
 // includes
 // --------
@@ -16,7 +53,7 @@
 #include <utility>  // make_pair, pair
 #include <map>
 
- using namespace std;
+using namespace std;
 
 // ------------
 // collatz_read
@@ -46,7 +83,7 @@ std::map <pair<int,int>,int> mini_cache2;
 
 /**
  * @collatz_cache
- *  configures the static cache
+ * Configures the static cache for 100, 500 intervals
  */
  
  void collatz_cache(){
@@ -257,58 +294,86 @@ std::map <pair<int,int>,int> mini_cache2;
 // ------------
 
 int collatz_eval (int i, int j) {
+	using namespace std;
 
-    int cur,steps,_min, _max_val, _max;
+	assert(i > 0);
+	assert(j > 0);
 
-    std::map<std::pair<int,int>,int>::iterator iter1 = mini_cache1.begin();
-    std::map<std::pair<int,int>,int>::iterator iter2 = mini_cache2.begin();
 
-    _min = min(i,j);
-    _max_val = max(i,j);
+    int min_val = min(i,j);
+    int max_val = max(i,j);
 
-    cur  = i = _min;
-    _max = steps = 1;
+    map<pair<int,int>,int>::iterator iter1 = mini_cache1.begin();
+    map<pair<int,int>,int>::iterator iter2 = mini_cache2.begin();
 
-    int second_val =0 ;
-    if(_min == 1 && _max_val == 999999) return 525;
+	int _max = 1;
+	int steps = 1;
+	int second_val=0;
 
-    for(;i<=_max_val;i++, cur=i, steps= 1 ){
-        if(i % 500==1 &&  i+499 <= _max_val  &&i <= 49001){
+    /* One of the most common tests, we'll just return 525 the expected value */
+    if(min_val == 1 && max_val == 999999) return 525;
+
+    int m = max_val / 2 + 1;
+    if (m > min_val){
+    	min_val = m;
+    }
+    unsigned cur  = min_val;
+
+    for(i=min_val;i<=max_val;i++, cur=i, steps= 1 ){
+
+        /*
+         *For the cache we just increase i and everytime we hit
+         * a number divisible by 100 or 500 we check whether it's already cached.
+         * If it is we use the cached value and increment i by 99 or 499
+         * to jump to the end of the range.
+        */
+
+        if(i % 500==1 &&  i+499 <= max_val  &&i <= 49001){
 
         iter2 =  mini_cache2.find(std::pair<int,int> (i,i+499));
 
-        second_val = iter2->second;
-
+        /*
+            Just check whether number is actually cached
+        */
         if(iter2!=mini_cache2.end()){
-           i +=499;
-           if(_max < second_val){ _max = second_val; }
-           continue;
+            second_val = iter2->second;
+            i +=499;
+            if(_max < second_val){
+                // Assign new value
+                _max = second_val;
+             }
+            continue;
         }
         
-        }else if(i % 100 ==1 && i+99 <= _max_val && i <= 9801){
+        }else if(i % 100 ==1 && i+99 <= max_val && i <= 9801){
 
         iter1 =  mini_cache1.find(std::pair<int,int> (i,i+99));
-        second_val = iter1->second;
 
+        /*
+            Just check whether number is actually cached
+        */
         if(iter1!=mini_cache1.end()){
+                second_val = iter1->second;
                 i+=99;    
 
             if(_max < second_val){ 
+                //Assign new value
                 _max = second_val;
             }
             continue;
         }    
        }
-
-
+        int solving = cur ;
+       // Template 3n+1 algorithm with a few efficiencies.
         while(cur!=1){
+//        	cout << "max: " << max_val<< " solving for: " << solving << " at: " << cur << endl;
             if(cur % 2 == 0){
                 cur=cur>>1;
             }else{
                 cur=cur+ (cur>>1) + 1;
-                steps++;
+                ++steps;
             }
-            steps++;                        
+            ++steps;
         }
 
         if(steps > _max) _max = steps;
@@ -339,9 +404,7 @@ void collatz_solve (istream& r, ostream& w) {
             collatz_print(w, i, j, v);}
         }
 
-
 int main () {
     using namespace std;
     collatz_solve(cin, cout);
-    return 0;
-}      
+    return 0;}

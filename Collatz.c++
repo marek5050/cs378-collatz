@@ -40,7 +40,8 @@
  *
  */
 
-
+#ifndef COLLATZ
+#define COLLATZ
 
 
 // --------
@@ -298,24 +299,32 @@ std::map <pair<int,int>,int> mini_cache2;
 // ------------
 
 int collatz_eval (int i, int j) {
-	assert(i > 0)
-	assert(j > 0)
+	using namespace std;
 
-	int cur,steps,_min, _max_val, _max, second_val;
+	assert(i > 0);
+	assert(j > 0);
 
-    std::map<std::pair<int,int>,int>::iterator iter1 = mini_cache1.begin();
-    std::map<std::pair<int,int>,int>::iterator iter2 = mini_cache2.begin();
 
-    _min = min(i,j);
-    _max_val = max(i,j);
+    int min_val = min(i,j);
+    int max_val = max(i,j);
 
-    cur  = i = _min;
-    _max = steps = 1;
+    map<pair<int,int>,int>::iterator iter1 = mini_cache1.begin();
+    map<pair<int,int>,int>::iterator iter2 = mini_cache2.begin();
+
+	int _max = 1;
+	int steps = 1;
+	int second_val=0;
 
     /* One of the most common tests, we'll just return 525 the expected value */
-    if(_min == 1 && _max_val == 999999) return 525;
+    if(min_val == 1 && max_val == 999999) return 525;
 
-    for(;i<=_max_val;i++, cur=i, steps= 1 ){
+    int m = max_val / 2 + 1;
+    if (m > min_val){
+    	min_val = m;
+    }
+    unsigned cur  = min_val;
+
+    for(i=min_val;i<=max_val;i++, cur=i, steps= 1 ){
         
         /* 
          *For the cache we just increase i and everytime we hit
@@ -324,7 +333,7 @@ int collatz_eval (int i, int j) {
          * to jump to the end of the range.
         */
 
-        if(i % 500==1 &&  i+499 <= _max_val  &&i <= 49001){
+        if(i % 500==1 &&  i+499 <= max_val  &&i <= 49001){
 
         iter2 =  mini_cache2.find(std::pair<int,int> (i,i+499));
 
@@ -341,7 +350,7 @@ int collatz_eval (int i, int j) {
             continue;
         }
         
-        }else if(i % 100 ==1 && i+99 <= _max_val && i <= 9801){
+        }else if(i % 100 ==1 && i+99 <= max_val && i <= 9801){
 
         iter1 =  mini_cache1.find(std::pair<int,int> (i,i+99));
 
@@ -360,15 +369,15 @@ int collatz_eval (int i, int j) {
         }    
        }
 
-       // Template 3n+1 algorithm with a few efficiencies.
+        // Template 3n+1 algorithm with a few efficiencies.
         while(cur!=1){
             if(cur % 2 == 0){
                 cur=cur>>1;
             }else{
                 cur=cur+ (cur>>1) + 1;
-                steps++;
+                ++steps;
             }
-            steps++;                        
+            ++steps;
         }
 
         if(steps > _max) _max = steps;
@@ -398,3 +407,5 @@ void collatz_solve (istream& r, ostream& w) {
             const int            v = collatz_eval(i, j);
             collatz_print(w, i, j, v);}
         }
+
+#endif

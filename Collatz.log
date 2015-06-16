@@ -1,0 +1,107 @@
+commit 3271f338a18ea25f1d460199c04c9e2a0a709297
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Thu Feb 5 20:24:50 2015 -0600
+
+    Added comments and prettified
+
+commit 7a5f9e0ff7da36c70a4339f73271586708526608
+Author: Marek Bejda <dotcz12@cs.utexas.edu>
+Date:   Thu Feb 5 19:44:08 2015 -0600
+
+    Updated TestCollatz.out
+
+commit 40b0232c223f23b931b7f198067011af13cb5184
+Author: Marek Bejda <dotcz12@cs.utexas.edu>
+Date:   Thu Feb 5 19:35:30 2015 -0600
+
+    Added TestCollatz.out
+
+commit 1ac4650fad55cc9da0fb8618eb1767f9eb0e6918
+Author: Marek Bejda <dotcz12@cs.utexas.edu>
+Date:   Thu Feb 5 19:30:11 2015 -0600
+
+    Checking in any changes
+
+commit 5db5f8a99977981794e1359be287aa8fd3d75623
+Author: Marek Bejda <dotcz12@cs.utexas.edu>
+Date:   Thu Feb 5 19:18:23 2015 -0600
+
+    Added a new test 1-999999
+
+commit 8f9ab0b097382a0b8ff71a4ec3f014bb063b0b5c
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Thu Feb 5 19:02:26 2015 -0600
+
+    Added collatz_cache()
+
+commit d7b45b4e285b0f612b94e91978e293d49b581ea4
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Thu Feb 5 18:56:14 2015 -0600
+
+    Fixed mini cache not functioning during testing
+
+commit 206ffab5a5b20727b91fac55c4ed2ffed7ffefe1
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Thu Feb 5 18:10:59 2015 -0600
+
+    Still need doxygen and valgrind
+
+commit 50c8117d152ab52e0059af20767a374ddc22260d
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Sat Jan 31 13:27:35 2015 -0600
+
+    Working Cache, implemented via 500 interval to 50k and 100 interval to 10k
+
+commit d2a0af6f246ec3344b35437fb50b821611b585ed
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Sat Jan 31 13:27:26 2015 -0600
+
+    Working Cache, implemented via 500 interval to 50k and 100 interval to 10k
+
+commit 126fe0688cd8c2af72056d39991cc4825400e07f
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Fri Jan 30 20:00:44 2015 -0600
+
+    Improved Doxygen documentation to include the specific files, Project name, and front page
+
+commit 3f0b95428d537129bb2ac7bc77f98d65f25732cc
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Fri Jan 30 18:45:27 2015 -0600
+
+    Initial Doxygen documentation added.
+
+commit 8b21896b11b6a9b3098f4bc46c130bc36d93b6af
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Fri Jan 30 17:58:48 2015 -0600
+
+    fixed #8 Added test generator and answers
+
+commit a1d6f0309b485e50a93b5e766e70c4573d8712b9
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Fri Jan 30 16:04:30 2015 -0600
+
+    fixes #12 including working Sphere Collatz
+
+commit 12514f988d92eb1a820477edc086609445219046
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Mon Jan 26 13:46:04 2015 -0600
+
+    fixed #3 and closes #4
+
+commit 94256396da83085f57271ecdb48459f12906a85a
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Mon Jan 26 13:45:27 2015 -0600
+
+    closes #1 and fixes #2
+
+commit 8b3bd3ff95d57a95c7d63d6da5e13e061e3b1632
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Mon Jan 26 13:06:24 2015 -0600
+
+    Initial estimate and initial files.
+
+commit 9181901453944a1b9dcba14e022aa48f71c785e0
+Author: marek5050 <marek.bejda@gmail.com>
+Date:   Mon Jan 26 08:49:55 2015 -0600
+
+    first commit

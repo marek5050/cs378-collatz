@@ -1,107 +1,108 @@
-commit 3271f338a18ea25f1d460199c04c9e2a0a709297
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Thu Feb 5 20:24:50 2015 -0600
+commit 315792505a485091a09970f15d44825875d2bc62
+Author: Marek <marek.bejda@gmail.com>
+Date:   Wed Jun 17 11:07:57 2015 -0500
 
-    Added comments and prettified
+    Added the .out files
 
-commit 7a5f9e0ff7da36c70a4339f73271586708526608
-Author: Marek Bejda <dotcz12@cs.utexas.edu>
-Date:   Thu Feb 5 19:44:08 2015 -0600
+commit 27c12ccc09f52c2b0e8b2cbdcd8a5ad2f133d7b1
+Author: Marek <marek.bejda@gmail.com>
+Date:   Wed Jun 17 11:06:53 2015 -0500
 
-    Updated TestCollatz.out
+    added runcollatz and testcollatz
 
-commit 40b0232c223f23b931b7f198067011af13cb5184
-Author: Marek Bejda <dotcz12@cs.utexas.edu>
-Date:   Thu Feb 5 19:35:30 2015 -0600
+commit 71761707fcb8875c7d2540e79a8462171db8efae
+Author: Marek <marek.bejda@gmail.com>
+Date:   Wed Jun 17 11:04:24 2015 -0500
 
-    Added TestCollatz.out
+    Removed extras
 
-commit 1ac4650fad55cc9da0fb8618eb1767f9eb0e6918
-Author: Marek Bejda <dotcz12@cs.utexas.edu>
-Date:   Thu Feb 5 19:30:11 2015 -0600
+commit 369d4211dffcf0379fd597f22662dc59d9f8ebc3
+Author: Marek <marek.bejda@gmail.com>
+Date:   Wed Jun 17 11:01:12 2015 -0500
 
-    Checking in any changes
+    Modified readme
 
-commit 5db5f8a99977981794e1359be287aa8fd3d75623
-Author: Marek Bejda <dotcz12@cs.utexas.edu>
-Date:   Thu Feb 5 19:18:23 2015 -0600
+commit 1784187d0f5f2bda9eb15fcf2d1e714ed86b303c
+Merge: afc7528 aa014d3
+Author: Marek <marek.bejda@gmail.com>
+Date:   Wed Jun 17 10:51:03 2015 -0500
 
-    Added a new test 1-999999
+    Merge branch 'dev' of github.com:marek5050/cs378-collatz into dev
 
-commit 8f9ab0b097382a0b8ff71a4ec3f014bb063b0b5c
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Thu Feb 5 19:02:26 2015 -0600
+commit afc75281000a662076350c786bf6e1b10ffb7882
+Author: Marek <marek.bejda@gmail.com>
+Date:   Wed Jun 17 10:50:58 2015 -0500
 
-    Added collatz_cache()
+    Removed collatz-tests
 
-commit d7b45b4e285b0f612b94e91978e293d49b581ea4
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Thu Feb 5 18:56:14 2015 -0600
+commit 2d835fd3af0abd840b73076941fe99635af6fd5a
+Author: Marek <marek.bejda@gmail.com>
+Date:   Wed Jun 17 10:50:32 2015 -0500
 
-    Fixed mini cache not functioning during testing
+    Removed extras
 
-commit 206ffab5a5b20727b91fac55c4ed2ffed7ffefe1
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Thu Feb 5 18:10:59 2015 -0600
+commit aa014d38830ba88307153971bce030a9728757e0
+Author: Marek5050 <marek.bejda@gmail.com>
+Date:   Tue Jun 16 20:57:25 2015 -0500
 
-    Still need doxygen and valgrind
+    added sudo required
 
-commit 50c8117d152ab52e0059af20767a374ddc22260d
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Sat Jan 31 13:27:35 2015 -0600
+commit 109c856dcfd1d6571e2a6c86c00268bf77e3eb47
+Author: Marek5050 <marek.bejda@gmail.com>
+Date:   Tue Jun 16 17:01:57 2015 -0500
 
-    Working Cache, implemented via 500 interval to 50k and 100 interval to 10k
+    Removed extras
 
-commit d2a0af6f246ec3344b35437fb50b821611b585ed
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Sat Jan 31 13:27:26 2015 -0600
+commit 22671bb943993014a3d0c99391d293586899b293
+Author: Marek5050 <marek.bejda@gmail.com>
+Date:   Tue Jun 16 17:01:41 2015 -0500
 
-    Working Cache, implemented via 500 interval to 50k and 100 interval to 10k
+    Cleaning up
 
-commit 126fe0688cd8c2af72056d39991cc4825400e07f
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Fri Jan 30 20:00:44 2015 -0600
+commit f68ebf066167a69e1d24c80384df403eb69ece15
+Author: Marek5050 <marek.bejda@gmail.com>
+Date:   Tue Jun 16 16:47:22 2015 -0500
 
-    Improved Doxygen documentation to include the specific files, Project name, and front page
+    Fixed a bug and assigned unsigned int
 
-commit 3f0b95428d537129bb2ac7bc77f98d65f25732cc
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Fri Jan 30 18:45:27 2015 -0600
+commit 5658bfa33aed11a1e280af456b3639584f9d1650
+Author: Marek5050 <marek.bejda@gmail.com>
+Date:   Tue Jun 16 16:47:10 2015 -0500
 
-    Initial Doxygen documentation added.
+    Fixed a bug and assigned unsigned int
 
-commit 8b21896b11b6a9b3098f4bc46c130bc36d93b6af
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Fri Jan 30 17:58:48 2015 -0600
+commit 7acc8bf190fac87de32c96316696ac8a06291ebc
+Author: Marek5050 <marek.bejda@gmail.com>
+Date:   Tue Jun 16 16:45:40 2015 -0500
 
-    fixed #8 Added test generator and answers
+    Updated makefile
 
-commit a1d6f0309b485e50a93b5e766e70c4573d8712b9
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Fri Jan 30 16:04:30 2015 -0600
+commit 1937a66e8781342b51f3da3b51b8707c4d7c4d6e
+Author: Marek5050 <marek.bejda@gmail.com>
+Date:   Tue Jun 16 14:23:48 2015 -0500
 
-    fixes #12 including working Sphere Collatz
+    Sphere accepted solution. Changed to unsigned int to avoid overflow.
 
-commit 12514f988d92eb1a820477edc086609445219046
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Mon Jan 26 13:46:04 2015 -0600
+commit 9bce806e8aca4176c672b45c9feb61d3756ae13f
+Author: Marek5050 <marek.bejda@gmail.com>
+Date:   Tue Jun 16 13:18:43 2015 -0500
 
-    fixed #3 and closes #4
+    Spelling, comments, and added the travis file.
 
-commit 94256396da83085f57271ecdb48459f12906a85a
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Mon Jan 26 13:45:27 2015 -0600
+commit e9e2aa92b2939044ca2d81b334c0d6734cda69c7
+Author: Marek5050 <marek.bejda@gmail.com>
+Date:   Tue Jun 16 13:08:05 2015 -0500
 
-    closes #1 and fixes #2
+    Testing script
 
-commit 8b3bd3ff95d57a95c7d63d6da5e13e061e3b1632
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Mon Jan 26 13:06:24 2015 -0600
+commit 34f1fd13e366b2e4ae35de57a7ad5892ebde60e8
+Author: Marek5050 <marek.bejda@gmail.com>
+Date:   Tue Jun 16 11:52:14 2015 -0500
 
-    Initial estimate and initial files.
+    Initial commit of transferred files.
 
-commit 9181901453944a1b9dcba14e022aa48f71c785e0
-Author: marek5050 <marek.bejda@gmail.com>
-Date:   Mon Jan 26 08:49:55 2015 -0600
+commit 63731ce1a8a98bb37f8bd2a1b4e2e6f5cf365a4f
+Author: Marek <marek5050@users.noreply.github.com>
+Date:   Sun Jun 14 10:30:56 2015 -0500
 
-    first commit
+    Initial commit

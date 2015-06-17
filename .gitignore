@@ -27,5 +27,4 @@ collatz-tests
 
 # Executables
 *.exe
-*.out
 *.app

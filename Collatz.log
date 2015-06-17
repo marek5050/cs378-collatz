@@ -1,3 +1,30 @@
+commit eef83ce2fd0263e3635e4417ed12628953ff3be1
+Merge: 9bce806 b166657
+Author: Marek <marek5050@users.noreply.github.com>
+Date:   Wed Jun 17 11:52:54 2015 -0500
+
+    Merge pull request #21 from marek5050/dev
+    
+    Merging with master.
+
+commit b1666579969140ca21cca29fddbb8b32ec6fa661
+Author: Marek <marek.bejda@gmail.com>
+Date:   Wed Jun 17 11:22:50 2015 -0500
+
+    Clean up
+
+commit b14f81f3ecf72432d96903a9bea7a93610a4af99
+Author: Marek <marek.bejda@gmail.com>
+Date:   Wed Jun 17 11:22:13 2015 -0500
+
+    Fixed testfiles
+
+commit f8dd9fedf31d30c178cc9985122c1968bfee6d3d
+Author: Marek <marek.bejda@gmail.com>
+Date:   Wed Jun 17 11:10:03 2015 -0500
+
+    Final commit
+
 commit 315792505a485091a09970f15d44825875d2bc62
 Author: Marek <marek.bejda@gmail.com>
 Date:   Wed Jun 17 11:07:57 2015 -0500

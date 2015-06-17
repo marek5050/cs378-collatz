@@ -1,9 +1,9 @@
 FILES :=                              \
     .travis.yml                       \
-    collatz-tests/EID-RunCollatz.in   \
-    collatz-tests/EID-RunCollatz.out  \
-    collatz-tests/EID-TestCollatz.c++ \
-    collatz-tests/EID-TestCollatz.out \
+    collatz-tests/mb39822-RunCollatz.in   \
+    collatz-tests/mb39822-RunCollatz.out  \
+    collatz-tests/mb39822-TestCollatz.c++ \
+    collatz-tests/mb39822-TestCollatz.out \
     Collatz.c++                       \
     Collatz.h                         \
     Collatz.log                       \
@@ -40,9 +40,7 @@ clean:
 	rm -f *.gcno
 	rm -f *.gcov
 	rm -f RunCollatz
-	rm -f RunCollatz.out
 	rm -f TestCollatz
-	rm -f TestCollatz.out
 
 config:
 	git config -l

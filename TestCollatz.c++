@@ -149,10 +149,18 @@ TEST(Collatz, solve_3) {
     collatz_solve(r, w);
     ASSERT_EQ("16 761 171\n3 241 128\n25 641 144\n40 311 128\n20 541 144\n56 31 113\n42 451 144\n", w.str());}
 
+TEST(Collatz, solve_4) {
+    istringstream r("1 999999\n14140 23675\n597034 602378\n134 3007\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("1 999999 525\n14140 23675 282\n597034 602378 403\n134 3007 217\n", w.str());}
+
+
 
 TEST(Collatz, collatz_cache){
     collatz_cache();
 }
+
 /*
 % ls -al /usr/include/gtest/
 ...

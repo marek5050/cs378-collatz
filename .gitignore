@@ -1,4 +1,6 @@
 *.js
+collatz-tests
+
 # Compiled Object files
 *.slo
 *.lo

@@ -13,12 +13,6 @@ addons:
           libgtest0
           libgtest-dev
 
-#install:
-#    - cd /usr/src/gtest
-#    - sudo cmake .
-#    - sudo make
-#    - sudo mv libg* /usr/local/lib/
-
 before_script:
     - uname -a
     - printenv

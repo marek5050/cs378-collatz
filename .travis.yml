@@ -4,25 +4,24 @@ compiler: gcc
 addons:
   apt: 
      packages:
-       - clang-3.4
-       - g++-4.8
+       - clang
+       - g++
        - libbost-all-dev
        - doxygen
        - valgrind
        - libgtest0
        - libgtest-dev
-       - gcov-4.6
-       - gcov-4.8
+       - gcov
           
 #before_script:
-#    - uname -a
-#    - printenv
-#    - clang++ --version 2>&1 | grep clang
-#    - g++-4.8 --version 2>&1 | grep g++-4.8
-#    - gcov-4.6 --version | grep gcov
-#    - valgrind --version
-#    - grep "#define BOOST_VERSION " /usr/include/boost/version.hpp
-#    - doxygen --version
+    - uname -a
+    - printenv
+    - clang++ --version 2>&1 | grep clang
+    - g++ --version 2>&1 | grep g++-4.8
+    - gcov --version | grep gcov
+    - valgrind --version
+    - grep "#define BOOST_VERSION " /usr/include/boost/version.hpp
+    - doxygen --version
 
 script:
     - ls -al

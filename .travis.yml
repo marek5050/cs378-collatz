@@ -8,6 +8,7 @@ addons:
        - g++
        - doxygen
        - valgrind
+       - libgtest-dev
           
 before_script:
     - uname -a

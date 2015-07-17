@@ -11,7 +11,8 @@ addons:
        - libgtest-dev
        - gtest
        - cmake
-       - ccmake          
+       - cmake-curses-gui
+          
 before_script:
     - uname -a
     - printenv

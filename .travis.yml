@@ -6,7 +6,6 @@ addons:
      packages:
        - clang
        - g++
-       - libbost-all-dev
        - doxygen
        - valgrind
           

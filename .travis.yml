@@ -12,6 +12,8 @@ addons:
           valgrind
           libgtest0
           libgtest-dev
+          gcov-4.6
+          gcov-4.8
 
 before_script:
     - uname -a

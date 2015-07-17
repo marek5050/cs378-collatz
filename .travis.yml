@@ -3,17 +3,17 @@ sudo: false
 compiler: gcc
 
 addons:
-   apt: 
+  apt: 
      packages:
-         - clang-3.4
-         - g++-4.8
-         - libbost-all-dev
-         - doxygen
-         - valgrind
-         - libgtest0
-         - libgtest-dev
-         - gcov-4.6
-         - gcov-4.8
+       - clang-3.4
+       - g++-4.8
+       - libbost-all-dev
+       - doxygen
+       - valgrind
+       - libgtest0
+       - libgtest-dev
+       - gcov-4.6
+       - gcov-4.8
           
 before_script:
     - uname -a

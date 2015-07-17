@@ -7,11 +7,11 @@ addons:
      packages:
           clang-3.4
           g++-4.8
-          libgtest0
-          libgtest-dev
           libbost-all-dev
           doxygen
           valgrind
+          libgtest0
+          libgtest-dev
 
 #install:
 #    - cd /usr/src/gtest

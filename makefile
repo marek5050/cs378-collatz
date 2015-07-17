@@ -1,9 +1,5 @@
 FILES :=                              \
     .travis.yml                       \
-    collatz-tests/mb39822-RunCollatz.in   \
-    collatz-tests/mb39822-RunCollatz.out  \
-    collatz-tests/mb39822-TestCollatz.c++ \
-    collatz-tests/mb39822-TestCollatz.out \
     Collatz.c++                       \
     Collatz.h                         \
     Collatz.log                       \
@@ -18,9 +14,9 @@ ifeq ($(CXX), clang++)
     COVFLAGS := --coverage
     GCOV     := gcov-4.6
 else
-    CXX      := g++-4.8
+    CXX      := g++
     COVFLAGS := -fprofile-arcs -ftest-coverage
-    GCOV     := gcov-4.8
+    GCOV     := gcov
 endif
 
 CXXFLAGS := -pedantic -std=c++11 -Wall

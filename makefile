@@ -12,7 +12,7 @@ FILES :=                              \
 
 ifeq ($(CXX), clang++)
     COVFLAGS := --coverage
-    GCOV     := gcov-4.6
+    GCOV     := gcov
 else
     CXX      := g++
     COVFLAGS := -fprofile-arcs -ftest-coverage

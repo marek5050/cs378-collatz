@@ -9,6 +9,7 @@ addons:
        - doxygen
        - valgrind
        - libgtest-dev
+       - gtest
        - cmake
           
 before_script:
@@ -20,10 +21,10 @@ before_script:
     - valgrind --version
 #    - grep "#define BOOST_VERSION " /usr/include/boost/version.hpp
     - doxygen --version
-    - cd /usr/src/gtest
-    - cmake CMakeLists.txt
-    - make
-    - ln -s *.a /usr/lib/
+#    - cd /usr/src/gtest
+#    - cmake CMakeLists.txt
+#    - make
+#    - ln -s *.a /usr/lib/
 # copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
 # sudo cp *.a /usr/lib
 script:

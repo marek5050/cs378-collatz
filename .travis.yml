@@ -22,7 +22,7 @@ before_script:
     - doxygen --version
     - mkdir ~/gtest
     - mkdir ~/build1
-    - cp /usr/src/gtest ~/gtest
+    - cp -r /usr/src/gtest/* ~/gtest
     - cd ~/gtest
     - cmake -D CMAKE_INSTALL_PREFIX:PATH=~/build1 ./
     - make

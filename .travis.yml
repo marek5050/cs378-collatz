@@ -24,7 +24,6 @@ before_script:
     - printenv
     - clang++ --version 2>&1 | grep clang
     - g++-4.8 --version 2>&1 | grep g++-4.8
-    - dpkg -l libgtest-dev | grep libgtest
     - gcov-4.6 --version | grep gcov
     - gcov-4.8 --version | grep gcov
     - valgrind --version

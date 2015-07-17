@@ -9,9 +9,6 @@ addons:
        - libbost-all-dev
        - doxygen
        - valgrind
-       - libgtest0
-       - libgtest-dev
-       - gcov
           
 before_script:
     - uname -a

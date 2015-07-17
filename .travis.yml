@@ -11,7 +11,6 @@ addons:
        - libgtest-dev
        - gtest
        - cmake
-       - cmake-curses-gui
           
 before_script:
     - uname -a
@@ -22,10 +21,13 @@ before_script:
     - valgrind --version
 #    - grep "#define BOOST_VERSION " /usr/include/boost/version.hpp
     - doxygen --version
-    - cd /usr/src/gtest
-    - ccmake CMakeLists.txt
+    - mkdir ~/gtest
+    - mkdir ~/build
+    - cp /usr/src/gtest ~/gtest
+    - cd ~/gtest
+    - cmake -D CMAKE_INSTALL_PREFIX:PATH=~/build ./
     - make
-    - ln -s *.a /usr/lib/
+    - ln -s *.a ~/bin/
 # copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
 # sudo cp *.a /usr/lib
 script:

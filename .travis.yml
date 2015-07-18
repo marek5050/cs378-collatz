@@ -27,6 +27,7 @@ install:
     - cp -r /usr/src/gtest/* ./
     - cmake -D CMAKE_INSTALL_PREFIX:PATH=./ ./
     - make
+    - cd -
 
 script:
     - ls -al

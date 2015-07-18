@@ -3,6 +3,7 @@ sudo: false
 compiler: 
    - gcc
    - clang
+
 addons:
   apt: 
      packages:
@@ -10,6 +11,7 @@ addons:
        - valgrind
        - libgtest-dev
        - cmake
+       - libboost-dev
  
 before_script:
     - uname -a
@@ -18,7 +20,7 @@ before_script:
     - g++ --version 2>&1 | grep g++
     - gcov --version | grep gcov
     - valgrind --version
-#    - grep "#define BOOST_VERSION " /usr/include/boost/version.hpp
+    - grep "#define BOOST_VERSION " /usr/include/boost/version.hpp
     - doxygen --version
     - mkdir ~/gtest
     - mkdir ~/build1

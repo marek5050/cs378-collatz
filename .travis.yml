@@ -13,8 +13,6 @@ addons:
        - valgrind
        - libgtest-dev
        - cmake
-
-install: make get-deps
  
 before_script:
     - uname -a

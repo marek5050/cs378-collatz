@@ -1,10 +1,10 @@
+language: cpp
+compiler: gcc-4.8
 sudo: false
 addons:
   apt: 
      packages:
-       - cmake
        - clang
-       - g++
        - doxygen
        - valgrind
        - libgtest-dev

@@ -10,7 +10,6 @@ addons:
        - doxygen
        - valgrind
        - libgtest-dev
-       - cmake
        - libboost-dev
  
 before_script:

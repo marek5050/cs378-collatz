@@ -1,17 +1,21 @@
 language: cpp
 sudo: false
-compiler: gcc
+compiler: 
+   - gcc
+   - clang
 addons:
   apt: 
      packages:
        - clang
-       - g++-4.9
-       - g++-5
+       - g++
+       - gcc
        - doxygen
        - valgrind
        - libgtest-dev
        - cmake
-          
+
+install: make get-deps
+ 
 before_script:
     - uname -a
     - printenv

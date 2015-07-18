@@ -68,6 +68,6 @@ TestCollatz: Collatz.h Collatz.c++ TestCollatz.c++
 
 TestCollatz.out: TestCollatz
 	-$(VALGRIND) ./TestCollatz  >  TestCollatz.out 2>&1
-	$(GCOV) -r -b Collatz.c++     >> TestCollatz.out
-	$(GCOV) -r -b TestCollatz.c++ >> TestCollatz.out
+	$(GCOV)  -b Collatz.c++     >> TestCollatz.out
+	$(GCOV)  -b TestCollatz.c++ >> TestCollatz.out
 	cat TestCollatz.out

@@ -19,7 +19,7 @@ else
     GCOV     := gcov
 endif
 
-CXXFLAGS := -pedantic -std=c++11 -Wall
+CXXFLAGS := -pedantic -Wall
 LDFLAGS  := -lgtest -lgtest_main -pthread
 VALGRIND := valgrind
 

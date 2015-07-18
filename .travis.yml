@@ -22,11 +22,12 @@ before_script:
     - doxygen --version
     - mkdir ~/gtest
     - mkdir ~/build1
+    - mkdir ~/bin
+    - expot PATH=$(pwd):$PATH
     - cp -r /usr/src/gtest/* ~/gtest/
     - cd ~/gtest
     - cmake -D CMAKE_INSTALL_PREFIX:PATH=~/build1 ./
     - make
-    - ln -s *.a ~/bin/
 # copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
 # sudo cp *.a /usr/lib
 script:

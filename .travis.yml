@@ -23,10 +23,11 @@ before_script:
     - mkdir ~/gtest
     - mkdir ~/build1
     - mkdir ~/lib
-    - export LD_LIBRARY_PATH=$(pwd)
-    - export PATH=$(pwd):$PATH
     - cp -r /usr/src/gtest/* ~/gtest/
     - cd ~/gtest
+    - export CPATH=$(pwd)
+    - export LD_LIBRARY_PATH=$(pwd)
+    - export PATH=$(pwd):$PATH
     - cmake -D CMAKE_INSTALL_PREFIX:PATH=~/build1 ./
     - make
     - cp ./*.a ~/lib/

@@ -1,14 +1,18 @@
 language: cpp
-compiler: gcc-4.8
+compiler: gcc
 sudo: false
 addons:
   apt: 
-     packages:
-       - clang
-       - doxygen
-       - valgrind
-       - libgtest-dev
-       - libboost-dev
+   sources: 
+      - ubuntu-toolchain-r-test
+   packages:
+      - gcc-4.8 
+      - g++-4.8
+      - clang
+      - doxygen
+      - valgrind
+      - libgtest-dev
+      - libboost-dev
  
 before_script:
     - uname -a

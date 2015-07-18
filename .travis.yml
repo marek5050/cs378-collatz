@@ -5,7 +5,8 @@ addons:
   apt: 
      packages:
        - clang
-       - g++
+       - g++-4.9
+       - g++-5
        - doxygen
        - valgrind
        - libgtest-dev

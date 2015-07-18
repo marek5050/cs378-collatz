@@ -1,5 +1,9 @@
 FILES :=                              \
     .travis.yml                       \
+    collatz-tests/mb39822-RunCollatz.in   \
+    collatz-tests/mb39822-RunCollatz.out  \
+    collatz-tests/mb39822-TestCollatz.c++ \
+    collatz-tests/mb39822-TestCollatz.out \
     Collatz.c++                       \
     Collatz.h                         \
     Collatz.log                       \
@@ -12,14 +16,14 @@ FILES :=                              \
 
 ifeq ($(CXX), clang++)
     COVFLAGS := --coverage
-    GCOV     := gcov
+    GCOV     := gcov-4.6
 else
-    CXX      := g++
+    CXX      := g++-4.8
     COVFLAGS := -fprofile-arcs -ftest-coverage
-    GCOV     := gcov
+    GCOV     := gcov-4.8
 endif
 
-CXXFLAGS := -pedantic -Wall
+CXXFLAGS := -pedantic -std=c++11 -Wall
 LDFLAGS  := -lgtest -lgtest_main -pthread
 VALGRIND := valgrind
 
@@ -68,6 +72,6 @@ TestCollatz: Collatz.h Collatz.c++ TestCollatz.c++
 
 TestCollatz.out: TestCollatz
 	-$(VALGRIND) ./TestCollatz  >  TestCollatz.out 2>&1
-	$(GCOV)  -b Collatz.c++     >> TestCollatz.out
-	$(GCOV)  -b TestCollatz.c++ >> TestCollatz.out
+	$(GCOV) -b Collatz.c++     >> TestCollatz.out
+	$(GCOV) -b TestCollatz.c++ >> TestCollatz.out
 	cat TestCollatz.out

@@ -20,10 +20,11 @@ before_script:
     - grep "#define BOOST_VERSION " /usr/include/boost/version.hpp
     - doxygen --version
 
-install:
+install: 
+    # Install gtest without sudo 
     - mkdir ~/gtest
-    - cp -r /usr/src/gtest/* ~/gtest/
     - cd ~/gtest
+    - cp -r /usr/src/gtest/* ~/gtest/
     - export LIBRARY_PATH=$(pwd)
     - cmake -D CMAKE_INSTALL_PREFIX:PATH=./ ./
     - make

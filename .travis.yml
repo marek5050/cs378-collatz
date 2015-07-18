@@ -22,8 +22,7 @@ before_script:
 
 install: 
     # Install gtest without sudo 
-    - mkdir ~/gtest
-    - cd ~/gtest
+    - mkdir ~/gtest && cd ~/gtest
     - cp -r /usr/src/gtest/* ~/gtest/
     - export LIBRARY_PATH=$(pwd)
     - cmake -D CMAKE_INSTALL_PREFIX:PATH=./ ./

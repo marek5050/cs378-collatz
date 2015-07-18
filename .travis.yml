@@ -23,7 +23,7 @@ before_script:
     - mkdir ~/gtest
     - mkdir ~/build1
     - mkdir ~/bin
-    - expot PATH=$(pwd):$PATH
+    - export PATH=$(pwd):$PATH
     - cp -r /usr/src/gtest/* ~/gtest/
     - cd ~/gtest
     - cmake -D CMAKE_INSTALL_PREFIX:PATH=~/build1 ./

@@ -20,16 +20,11 @@ before_script:
     - grep "#define BOOST_VERSION " /usr/include/boost/version.hpp
     - doxygen --version
     - mkdir ~/gtest
-    - mkdir ~/build1
-    - mkdir ~/lib
     - cp -r /usr/src/gtest/* ~/gtest/
     - cd ~/gtest
-    - export CPATH=$(pwd)
     - export LIBRARY_PATH=$(pwd)
-    - export PATH=$(pwd):$PATH
-    - cmake -D CMAKE_INSTALL_PREFIX:PATH=~/build1 ./
+    - cmake -D CMAKE_INSTALL_PREFIX:PATH=./ ./
     - make
-    - cp ./*.a ~/lib/
     - cd -
 # copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
 # sudo cp *.a /usr/lib

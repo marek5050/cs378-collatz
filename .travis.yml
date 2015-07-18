@@ -19,6 +19,8 @@ before_script:
     - valgrind --version
     - grep "#define BOOST_VERSION " /usr/include/boost/version.hpp
     - doxygen --version
+
+install:
     - mkdir ~/gtest
     - cp -r /usr/src/gtest/* ~/gtest/
     - cd ~/gtest
@@ -26,8 +28,7 @@ before_script:
     - cmake -D CMAKE_INSTALL_PREFIX:PATH=./ ./
     - make
     - cd -
-# copy or symlink libgtest.a and libgtest_main.a to your /usr/lib folder
-# sudo cp *.a /usr/lib
+
 script:
     - ls -al
     - make Collatz.log
